@@ -22,6 +22,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
+  background-color: gray;
   background-image: url("./images/me.jpeg");
   background-size: cover;
   background-position: center center;
