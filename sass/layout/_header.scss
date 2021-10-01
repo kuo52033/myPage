@@ -1,10 +1,5 @@
 .header {
-  position: relative;
-  height: 95vh;
-  background-color: gray;
-  background-image: url("./images/me.jpeg");
-  background-size: cover;
-  background-position: center center;
+  width: 100%;
 
   &__logo {
     cursor: pointer;
@@ -25,10 +20,8 @@
     animation: navbar 1.5s forwards;
     z-index: 50;
 
-    &.sticky {
-      background-color: #ebe5d9;
-      box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.3);
-    }
+    background-color: #ebe5d9;
+    box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.3);
   }
 
   &__ul {
@@ -69,17 +62,28 @@
     }
   }
 
-  &__mainTitle {
-    position: absolute;
-    bottom: 25%;
-    width: 40rem;
-    height: 17rem;
-    display: grid;
-    place-items: center;
-    font-size: 2.5rem;
-    font-family: "Kalam", cursive;
-    animation: mainTitle 1.2s forwards;
-    letter-spacing: 0.5rem;
-    color: #69454f;
+  &__main {
+    position: relative;
+    height: 93vh;
+    width: 100%;
+    background-color: gray;
+    background-image: url("./images/me.jpeg");
+    background-size: cover;
+    background-position: center center;
+    margin-top: 7rem;
+
+    &__title {
+      position: absolute;
+      bottom: 25%;
+      width: 40rem;
+      height: 17rem;
+      display: grid;
+      place-items: center;
+      font-size: 2.5rem;
+      font-family: "Kalam", cursive;
+      animation: mainTitle 1.2s forwards;
+      letter-spacing: 0.5rem;
+      color: #69454f;
+    }
   }
 }

@@ -80,12 +80,7 @@ body {
     animation: buttonUpdown 1s ease-out 0.75s backwards; }
 
 .header {
-  position: relative;
-  height: 95vh;
-  background-color: gray;
-  background-image: url("./images/me.jpeg");
-  background-size: cover;
-  background-position: center center; }
+  width: 100%; }
   .header__logo {
     cursor: pointer;
     width: 17rem;
@@ -101,10 +96,9 @@ body {
     align-items: center;
     transition: all 0.3s;
     animation: navbar 1.5s forwards;
-    z-index: 50; }
-    .header__nav.sticky {
-      background-color: #ebe5d9;
-      box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.3); }
+    z-index: 50;
+    background-color: #ebe5d9;
+    box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.3); }
   .header__ul {
     display: flex; }
     .header__ul__a {
@@ -132,15 +126,24 @@ body {
         transition: all 0.5s; }
     .header__ul li {
       padding: 1rem; }
-  .header__mainTitle {
-    position: absolute;
-    bottom: 25%;
-    width: 40rem;
-    height: 17rem;
-    display: grid;
-    place-items: center;
-    font-size: 2.5rem;
-    font-family: "Kalam", cursive;
-    animation: mainTitle 1.2s forwards;
-    letter-spacing: 0.5rem;
-    color: #69454f; }
+  .header__main {
+    position: relative;
+    height: 93vh;
+    width: 100%;
+    background-color: gray;
+    background-image: url("./images/me.jpeg");
+    background-size: cover;
+    background-position: center center;
+    margin-top: 7rem; }
+    .header__main__title {
+      position: absolute;
+      bottom: 25%;
+      width: 40rem;
+      height: 17rem;
+      display: grid;
+      place-items: center;
+      font-size: 2.5rem;
+      font-family: "Kalam", cursive;
+      animation: mainTitle 1.2s forwards;
+      letter-spacing: 0.5rem;
+      color: #69454f; }
