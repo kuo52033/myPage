@@ -1,0 +1,23 @@
+{
+  "name": "myPage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "sass": "node-sass ./sass/main.scss ./styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuo52033/myPage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuo52033/myPage/issues"
+  },
+  "homepage": "https://github.com/kuo52033/myPage#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

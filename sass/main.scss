@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import "./abstracts/variables";
+
+@import "./base/animations";
+@import "./base/base";
+@import "./base/typograpy";
+@import "./base/utilities";
+
+@import "./components/btn";
+
+@import "./layout/header";
+
+@import "./pages/home";

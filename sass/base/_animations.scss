@@ -1,0 +1,30 @@
+@keyframes navbar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mainTitle {
+  0% {
+    opacity: 0;
+    left: 5%;
+  }
+  100% {
+    opcacity: 1;
+    left: 11%;
+  }
+}
+
+@keyframes buttonUpdown {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
