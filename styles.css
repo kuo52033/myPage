@@ -114,6 +114,21 @@ body {
   .btn--animate {
     animation: buttonUpdown 1s ease-out 0.75s backwards; }
 
+.tooltip {
+  position: absolute;
+  white-space: nowrap;
+  bottom: -4rem;
+  right: 50%;
+  transform: translateX(50%);
+  height: 3rem;
+  padding: 4px 8px;
+  background-color: #000;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all 0.5s; }
+
 .header {
   width: 100%; }
   .header__logo {
@@ -180,7 +195,7 @@ body {
     background-size: cover;
     background-position: center center;
     margin-top: 7rem;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 93vh);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 93vh);
     z-index: 5; }
     .header__main__title {
       position: absolute;
@@ -195,20 +210,20 @@ body {
       color: white; }
 
 .technology {
-  height: 67rem;
+  position: relative;
+  height: 60rem;
   width: 100%;
-  margin-top: -18vh;
+  margin-top: -14vh;
   z-index: 0;
   overflow-x: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 42rem, 0 60rem); }
+  clip-path: polygon(0 0, 100% 0, 100% 50rem, 0 60rem); }
   .technology__box {
     display: flex;
     position: relative;
     width: 300%;
     height: 100%;
     right: 100%;
-    background-color: #f1f2f6;
-    background: linear-gradient(to bottom, #f1f2f6 0%, #c9c6c6 74%);
+    background-color: #ece4e2;
     transition: all 0.5s ease-in-out; }
   .technology__skill {
     width: calc(100% / 3);
@@ -222,6 +237,7 @@ body {
     width: 100%;
     height: 100%; }
     .technology__composition__box {
+      position: relative;
       width: 8rem;
       height: 8rem;
       padding: 1rem;
@@ -231,12 +247,25 @@ body {
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
       transition: all 0.3s ease-in; }
       .technology__composition__box:hover {
-        transform: scale(1.3);
+        transform: scale(1.2);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
         z-index: 20; }
+        .technology__composition__box:hover .tooltip {
+          opacity: 1; }
     .technology__composition__image {
       width: 100%;
       height: 100%; }
+  .technology__dotBox {
+    position: absolute;
+    bottom: 10rem;
+    width: 100%; }
+    .technology__dotBox__dot {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: lightgray;
+      cursor: pointer;
+      transition: all 0.3s; }
 
 .backIcon {
   cursor: pointer;
