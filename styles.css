@@ -28,11 +28,10 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Kalam", "Noto Sans TC", sans-serif;
-  overflow-x: hidden; }
+  font-family: "Kalam", "Noto Sans TC", sans-serif; }
 
 .secondary-heading {
-  font-size: 3rem;
+  font-size: 2.5rem;
   transition: all 0.3s; }
   .secondary-heading:hover {
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
@@ -52,7 +51,7 @@ body {
   margin-top: 6rem; }
 
 .u-margin-top-tech {
-  margin-top: 20vh; }
+  margin-top: 17vh; }
 
 .u-margin-right-small {
   margin-right: 2rem; }
@@ -71,6 +70,11 @@ body {
 
 .u-margin-left-big {
   margin-left: 6rem; }
+
+.u-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .btn {
   position: relative;
@@ -141,12 +145,23 @@ body {
       .header__ul__a:hover {
         color: #ffb471;
         transform: translateY(-0.3rem); }
-        .header__ul__a:hover::after {
+        .header__ul__a:hover::after, .header__ul__a:hover::before {
           transform: scale(1); }
       .header__ul__a::after {
         content: "";
         position: absolute;
         bottom: -1rem;
+        left: 0;
+        background-color: #ffb471;
+        width: 100%;
+        height: 0.2rem;
+        border-radius: 1.5rem;
+        transform: scale(0);
+        transition: all 0.5s; }
+      .header__ul__a::before {
+        content: "";
+        position: absolute;
+        top: -1rem;
         left: 0;
         background-color: #ffb471;
         width: 100%;
@@ -180,22 +195,48 @@ body {
       color: white; }
 
 .technology {
-  display: flex;
-  position: relative;
-  height: 55rem;
-  width: 300%;
-  right: 100%;
-  background-color: #f1f2f6;
-  background-image: linear-gradient(to bottom, #f1f2f6 0%, #c9c6c6 74%);
-  transition: all 0.5s ease-in-out;
+  height: 67rem;
+  width: 100%;
   margin-top: -18vh;
-  z-index: 0; }
+  z-index: 0;
+  overflow-x: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 42rem, 0 60rem); }
+  .technology__box {
+    display: flex;
+    position: relative;
+    width: 300%;
+    height: 100%;
+    right: 100%;
+    background-color: #f1f2f6;
+    background: linear-gradient(to bottom, #f1f2f6 0%, #c9c6c6 74%);
+    transition: all 0.5s ease-in-out; }
   .technology__skill {
-    width: calc(100% / 3); }
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column; }
     .technology__skill__title {
       display: flex;
       justify-content: center;
       align-items: center; }
+  .technology__composition {
+    width: 100%;
+    height: 100%; }
+    .technology__composition__box {
+      width: 8rem;
+      height: 8rem;
+      padding: 1rem;
+      border-radius: 1rem;
+      background-color: white;
+      background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(204, 201, 201, 0.3));
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease-in; }
+      .technology__composition__box:hover {
+        transform: scale(1.3);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        z-index: 20; }
+    .technology__composition__image {
+      width: 100%;
+      height: 100%; }
 
 .backIcon {
   cursor: pointer;

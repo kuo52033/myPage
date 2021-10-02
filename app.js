@@ -7,7 +7,7 @@
 let skill = 100;
 const backIcon = document.querySelectorAll(".backIcon");
 const nextIcon = document.querySelectorAll(".nextIcon");
-const technology = document.querySelector(".technology");
+const technology = document.querySelector(".technology__box");
 
 backIcon.forEach((icon) =>
   icon.addEventListener("click", () => {

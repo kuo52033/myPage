@@ -36,7 +36,8 @@
       &:hover {
         color: #ffb471;
         transform: translateY(-0.3rem);
-        &::after {
+        &::after,
+        &::before {
           transform: scale(1);
         }
       }
@@ -45,6 +46,19 @@
         content: "";
         position: absolute;
         bottom: -1rem;
+        left: 0;
+        background-color: #ffb471;
+        width: 100%;
+        height: 0.2rem;
+        border-radius: 1.5rem;
+        transform: scale(0);
+        transition: all 0.5s;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -1rem;
         left: 0;
         background-color: #ffb471;
         width: 100%;
