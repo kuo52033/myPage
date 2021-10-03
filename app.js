@@ -10,6 +10,7 @@ const backIcon = document.querySelectorAll(".backIcon");
 const nextIcon = document.querySelectorAll(".nextIcon");
 const technology = document.querySelector(".technology__box");
 const technology__dot = document.querySelectorAll(".technology__dotBox__dot");
+const project = document.querySelector(".projectSection");
 
 technology__dot[dot].style.backgroundColor = "black";
 
@@ -43,3 +44,8 @@ technology__dot.forEach((dotEl, index) =>
     dot = index;
   })
 );
+
+window.addEventListener("scroll", () => {
+  let windowScroll = window.scrollY;
+  project.style.backgroundPosition = `50% ${windowScroll * 0.04}%`;
+});

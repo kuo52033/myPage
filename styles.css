@@ -349,4 +349,5 @@ body {
   padding-bottom: 5rem;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(./images/bgImage.png);
   background-size: cover;
-  background-position: center center; }
+  background-position: 50% 15%;
+  background-repeat: no-repeat; }
