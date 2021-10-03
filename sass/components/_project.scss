@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55%;
-  background-color: white;
+  width: 65%;
+  background-color: rgba($color-white, 0.6);
   font-size: 2rem;
+  font-weight: 400;
   padding: 3rem 6rem;
   transform: skewX(-15deg);
   box-shadow: 0 3px 6rem rgba(0, 0, 0, 0.3);
@@ -14,10 +15,10 @@
   }
 
   &__shape {
+    flex-shrink: 0;
     position: relative;
     width: 25rem;
     height: 25rem;
-    background-color: orange;
     border-radius: 50%;
     overflow: hidden;
     &:hover .project__image {
@@ -78,5 +79,10 @@
         transform: translate(-50%, 60%) translateY(-0.2rem);
       }
     }
+  }
+
+  &__text {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transform: translateZ(0) scale(1, 1) skewX(16deg);
   }
 }

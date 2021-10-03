@@ -23,18 +23,18 @@
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
-html {
-  font-size: 62.5%; }
-
+html,
 body {
-  font-family: "Kalam", "Noto Sans TC", sans-serif; }
+  font-size: 62.5%;
+  font-family: "Kalam", "Noto Sans TC", sans-serif;
+  overflow-x: hidden; }
 
 .secondary-heading {
   font-size: 3.5rem;
   transition: all 0.3s; }
   .secondary-heading:hover {
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-    transform: skewX(5deg) skewY(-7deg); }
+    transform: scale(1.2); }
 
 .container {
   max-width: 60vw;
@@ -132,19 +132,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55%;
-  background-color: white;
+  width: 65%;
+  background-color: rgba(255, 255, 255, 0.6);
   font-size: 2rem;
+  font-weight: 400;
   padding: 3rem 6rem;
   transform: skewX(-15deg);
   box-shadow: 0 3px 6rem rgba(0, 0, 0, 0.3); }
   .project > * {
     transform: skewX(16deg); }
   .project__shape {
+    flex-shrink: 0;
     position: relative;
     width: 25rem;
     height: 25rem;
-    background-color: orange;
     border-radius: 50%;
     overflow: hidden; }
     .project__shape:hover .project__image {
@@ -188,91 +189,95 @@ body {
         transform: translate(-50%, 60%) translateY(-0.5rem); }
       .project__caption a:active {
         transform: translate(-50%, 60%) translateY(-0.2rem); }
+  .project__text {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transform: translateZ(0) scale(1, 1) skewX(16deg); }
 
-.header {
-  width: 100%; }
-  .header__logo {
-    cursor: pointer;
-    width: 17rem;
-    height: 9rem; }
-  .header__nav {
-    display: flex;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 7rem;
-    padding: 1rem 0;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: all 0.3s;
-    z-index: 50;
-    background-color: #ebe5d9;
-    box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.3); }
-  .header__ul {
-    display: flex;
-    list-style-type: none; }
-    .header__ul__a {
-      display: inline-block;
-      position: relative;
-      text-decoration: none;
-      font-size: 1.7rem;
-      color: #bb7748;
-      transition: all 0.2s ease-out; }
-      .header__ul__a:hover {
-        color: #ffb471;
-        transform: translateY(-0.3rem); }
-        .header__ul__a:hover::after, .header__ul__a:hover::before {
-          transform: scale(1); }
-      .header__ul__a::after {
-        content: "";
-        position: absolute;
-        bottom: -1rem;
-        left: 0;
-        background-color: #ffb471;
-        width: 100%;
-        height: 0.2rem;
-        border-radius: 1.5rem;
-        transform: scale(0);
-        transition: all 0.5s; }
-      .header__ul__a::before {
-        content: "";
-        position: absolute;
-        top: -1rem;
-        left: 0;
-        background-color: #ffb471;
-        width: 100%;
-        height: 0.2rem;
-        border-radius: 1.5rem;
-        transform: scale(0);
-        transition: all 0.5s; }
-    .header__ul li {
-      padding: 2rem; }
-  .header__main {
+.header__logo {
+  cursor: pointer;
+  width: 17rem;
+  height: 9rem; }
+
+.header__nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 7rem;
+  padding: 1rem 0;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.3s;
+  z-index: 50;
+  background-color: #ebe5d9;
+  box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.3); }
+
+.header__ul {
+  display: flex;
+  list-style-type: none; }
+  .header__ul__a {
+    display: inline-block;
     position: relative;
-    height: 93vh;
-    width: 100%;
-    background-color: gray;
-    background-image: url("./images/me.jpeg");
-    background-size: cover;
-    background-position: center center;
-    margin-top: 7rem;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 93vh);
-    z-index: 5; }
-    .header__main__title {
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: #bb7748;
+    transition: all 0.2s ease-out; }
+    .header__ul__a:hover {
+      color: #ffb471;
+      transform: translateY(-0.3rem); }
+      .header__ul__a:hover::after, .header__ul__a:hover::before {
+        transform: scale(1); }
+    .header__ul__a::after {
+      content: "";
       position: absolute;
-      bottom: 35%;
-      width: 40rem;
-      height: 17rem;
-      display: grid;
-      place-items: center;
-      font-size: 2.7rem;
-      animation: mainTitle 1.2s forwards;
-      letter-spacing: 0.5rem;
-      color: white; }
+      bottom: -1rem;
+      left: 0;
+      background-color: #ffb471;
+      width: 100%;
+      height: 0.2rem;
+      border-radius: 1.5rem;
+      transform: scale(0);
+      transition: all 0.5s; }
+    .header__ul__a::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: 0;
+      background-color: #ffb471;
+      width: 100%;
+      height: 0.2rem;
+      border-radius: 1.5rem;
+      transform: scale(0);
+      transition: all 0.5s; }
+  .header__ul li {
+    padding: 2rem; }
+
+.header__main {
+  position: relative;
+  height: 93vh;
+  width: 100%;
+  background-color: gray;
+  background-image: url("./images/me.jpeg");
+  background-size: cover;
+  background-position: center center;
+  margin-top: 7rem;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 93vh);
+  z-index: 5; }
+  .header__main__title {
+    position: absolute;
+    bottom: 35%;
+    width: 40rem;
+    height: 17rem;
+    display: grid;
+    place-items: center;
+    font-size: 2.7rem;
+    animation: mainTitle 1.2s forwards;
+    letter-spacing: 0.5rem;
+    color: white; }
 
 .technology {
   position: relative;
-  height: 60rem;
+  height: 55rem;
   width: 100%;
   margin-top: -14vh;
   z-index: 0;
@@ -317,7 +322,7 @@ body {
       height: 100%; }
   .technology__dotBox {
     position: absolute;
-    bottom: 10rem;
+    bottom: 3rem;
     width: 100%; }
     .technology__dotBox__dot {
       width: 1.5rem;
@@ -341,5 +346,7 @@ body {
 
 .projectSection {
   padding-top: 7rem;
-  padding-bottom: 40rem;
-  background: #eee; }
+  padding-bottom: 5rem;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(./images/bgImage.png);
+  background-size: cover;
+  background-position: center center; }
