@@ -24,6 +24,7 @@
 
   &__ul {
     display: flex;
+    list-style-type: none;
 
     &__a {
       display: inline-block;
