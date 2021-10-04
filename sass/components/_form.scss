@@ -1,0 +1,78 @@
+.formSection {
+  width: 80%;
+  margin: 0 auto;
+
+  &-1 {
+    display: flex;
+  }
+}
+
+.form {
+  &-group {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  &-input {
+    border: none;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-radius: 3px;
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s;
+    font-size: 1.6rem;
+    box-shadow: 0 0.2rem 0.4rem rgba($color-black, 0.2);
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0.3rem 0.9rem rgba($color-black, 0.5);
+      border-bottom: 4px solid limegreen;
+
+      &:invalid {
+        border-bottom: 4px solid orangered;
+      }
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    &:not(:placeholder-shown) {
+      &:valid {
+        border-bottom: 4px solid limegreen;
+      }
+      &:invalid {
+        border-bottom: 4px solid orangered;
+      }
+    }
+
+    &::placeholder {
+      transition: all 0.5s;
+      color: lightgray;
+    }
+  }
+
+  &-label {
+    position: absolute;
+    display: inline-block;
+    font-size: 2rem;
+    opacity: 0;
+    left: 4rem;
+    top: 2rem;
+    transition: all 0.5s;
+  }
+
+  &-btn {
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    border: none;
+  }
+
+  &-input:not(:placeholder-shown) + &-label,
+  &-input:focus + &-label {
+    opacity: 1;
+    transform: translateY(-3rem);
+  }
+}

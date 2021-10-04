@@ -30,7 +30,7 @@ body {
   overflow-x: hidden; }
 
 .secondary-heading {
-  font-size: 3.5rem;
+  font-size: 3.7rem;
   transition: all 0.3s; }
   .secondary-heading:hover {
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
@@ -112,6 +112,10 @@ body {
     background-color: #ece4e2; }
     .btn--light::after {
       background-color: #ece4e2; }
+  .btn--brown {
+    background-color: #bd8e62; }
+    .btn--brown::after {
+      background-color: #bd8e62; }
 
 .tooltip {
   position: absolute;
@@ -193,6 +197,62 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-transform: translateZ(0) scale(1, 1) skewX(16deg); }
 
+.formSection {
+  width: 80%;
+  margin: 0 auto; }
+  .formSection-1 {
+    display: flex; }
+
+.form-group {
+  position: relative;
+  width: 100%;
+  padding: 2rem; }
+
+.form-input {
+  border: none;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 3px;
+  border-bottom: 4px solid transparent;
+  transition: all 0.3s;
+  font-size: 1.6rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2); }
+  .form-input:focus {
+    outline: none;
+    box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.5);
+    border-bottom: 4px solid limegreen; }
+    .form-input:focus:invalid {
+      border-bottom: 4px solid orangered; }
+    .form-input:focus::placeholder {
+      opacity: 0; }
+  .form-input:not(:placeholder-shown):valid {
+    border-bottom: 4px solid limegreen; }
+  .form-input:not(:placeholder-shown):invalid {
+    border-bottom: 4px solid orangered; }
+  .form-input::placeholder {
+    transition: all 0.5s;
+    color: lightgray; }
+
+.form-label {
+  position: absolute;
+  display: inline-block;
+  font-size: 2rem;
+  opacity: 0;
+  left: 4rem;
+  top: 2rem;
+  transition: all 0.5s; }
+
+.form-btn {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  border: none; }
+
+.form-input:not(:placeholder-shown) + .form-label,
+.form-input:focus + .form-label {
+  opacity: 1;
+  transform: translateY(-3rem); }
+
 .header__logo {
   cursor: pointer;
   width: 17rem;
@@ -257,7 +317,7 @@ body {
   height: 93vh;
   width: 100%;
   background-color: gray;
-  background-image: url("./images/me.jpeg");
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 16%, transparent 25%), url("./images/me.jpeg");
   background-size: cover;
   background-position: center center;
   margin-top: 7rem;
@@ -275,20 +335,24 @@ body {
     letter-spacing: 0.5rem;
     color: white; }
 
+.footer {
+  padding: 6rem 0;
+  background-color: #3f3f3f; }
+
 .technology {
   position: relative;
-  height: 55rem;
+  height: 60rem;
   width: 100%;
   margin-top: -14vh;
   z-index: 0;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: #ece4e2; }
   .technology__box {
     display: flex;
     position: relative;
     width: 300%;
     height: 100%;
     right: 100%;
-    background-color: #ece4e2;
     transition: all 0.5s ease-in-out; }
   .technology__skill {
     width: calc(100% / 3);
@@ -322,7 +386,7 @@ body {
       height: 100%; }
   .technology__dotBox {
     position: absolute;
-    bottom: 3rem;
+    bottom: 4rem;
     width: 100%; }
     .technology__dotBox__dot {
       width: 1.5rem;
@@ -348,6 +412,11 @@ body {
   padding-top: 7rem;
   padding-bottom: 5rem;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(./images/bgImage.png);
-  background-size: cover;
+  background-size: 100% 2000px;
   background-position: 50% 15%;
   background-repeat: no-repeat; }
+
+.contactSection {
+  padding-top: 7rem;
+  padding-bottom: 8rem;
+  background-color: #ece4e2; }

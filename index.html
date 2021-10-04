@@ -18,8 +18,8 @@
         <ul class="header__ul">
           <li><a href="#aboutMe" class="header__ul__a">關於我</a></li>
           <li><a href="#technology" class="header__ul__a">相關技術</a></li>
-          <li><a href="#" class="header__ul__a">作品</a></li>
-          <li><a href="#" class="header__ul__a">聯繫我</a></li>
+          <li><a href="#project" class="header__ul__a">作品</a></li>
+          <li><a href="#contact" class="header__ul__a">聯繫</a></li>
         </ul>
       </nav>
       <div class="header__main">
@@ -44,7 +44,7 @@
               <img
                 src="./images/next.png"
                 alt="next"
-                class="nextIcon u-margin-left-medium"
+                class="nextIcon u-margin-left-big"
               />
             </div>
             <div class="technology__composition">
@@ -83,13 +83,13 @@
               <img
                 src="./images/back.png"
                 alt="back"
-                class="backIcon u-margin-right-medium"
+                class="backIcon u-margin-right-big"
               />
               <h1 class="secondary-heading">Front-End Skill</h1>
               <img
                 src="./images/next.png"
                 alt="next"
-                class="nextIcon u-margin-left-medium"
+                class="nextIcon u-margin-left-big"
               />
             </div>
             <div class="technology__composition">
@@ -136,7 +136,7 @@
               <img
                 src="./images/back.png"
                 alt="back"
-                class="backIcon u-margin-right-medium"
+                class="backIcon u-margin-right-big"
               />
               <h1 class="secondary-heading u-margin-right-big">
                 Some other Skill
@@ -173,7 +173,7 @@
         </div>
       </section>
 
-      <section class="projectSection">
+      <section class="projectSection" id="project">
         <div class="u-flex-center">
           <h1 class="secondary-heading">projects</h1>
         </div>
@@ -207,8 +207,63 @@
           </div>
         </div>
       </section>
-      <div class="" style="height: 100vh"></div>
+
+      <section class="contactSection" id="contact">
+        <div class="u-flex-center">
+          <h1 class="secondary-heading">Contact me</h1>
+        </div>
+        <div class="formSection">
+          <form action="#" class="form" autocomplete="off">
+            <div class="formSection-1">
+              <div class="form-group">
+                <input
+                  class="form-input"
+                  type="text"
+                  name="name"
+                  placeholder="name"
+                  id="name"
+                  required
+                />
+                <label class="form-label" for="name">name</label>
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-input"
+                  type="email"
+                  name="email"
+                  placeholder="email"
+                  id="email"
+                  required
+                />
+                <label class="form-label" for="email">email</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                class="form-input"
+                type="text"
+                name="content"
+                placeholder="content"
+                id="content"
+                required
+              />
+              <label class="form-label" for="content">content</label>
+            </div>
+            <div class="form-group u-flex-center">
+              <button class="form-btn btn btn--brown" type="submit">
+                Send
+                <img
+                  class="u-margin-left-small"
+                  src="./images/send.png"
+                  alt="send"
+                />
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
+    <footer class="footer"></footer>
     <script src="./app.js"></script>
   </body>
 </html>

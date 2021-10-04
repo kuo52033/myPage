@@ -1,10 +1,11 @@
 .technology {
   position: relative;
-  height: 55rem;
+  height: 60rem;
   width: 100%;
   margin-top: -14vh;
   z-index: 0;
   overflow-x: hidden;
+  background-color: $color-bg-1;
 
   &__box {
     display: flex;
@@ -12,7 +13,6 @@
     width: 300%;
     height: 100%;
     right: 100%;
-    background-color: #ece4e2;
     transition: all 0.5s ease-in-out;
   }
 
@@ -65,7 +65,7 @@
 
   &__dotBox {
     position: absolute;
-    bottom: 3rem;
+    bottom: 4rem;
     width: 100%;
 
     &__dot {
@@ -106,7 +106,13 @@
       rgba($color-white, 0.4)
     ),
     url(./images/bgImage.png);
-  background-size: cover;
+  background-size: 100% 2000px;
   background-position: 50% 15%;
   background-repeat: no-repeat;
+}
+
+.contactSection {
+  padding-top: 7rem;
+  padding-bottom: 8rem;
+  background-color: $color-bg-1;
 }

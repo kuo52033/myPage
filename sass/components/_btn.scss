@@ -49,4 +49,12 @@
       background-color: #ece4e2;
     }
   }
+
+  &--brown {
+    background-color: #bd8e62;
+
+    &::after {
+      background-color: #bd8e62;
+    }
+  }
 }
