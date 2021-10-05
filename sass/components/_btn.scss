@@ -2,18 +2,18 @@
   position: relative;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: $color-black;
   padding: 1rem 4.5rem;
   cursor: pointer;
   font-size: 1.5rem;
   border-radius: 2.5rem;
   transition: all 0.2s;
-  box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1rem 1rem rgba($color-black, 0.2);
   font-weight: bold;
 
   &:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 1rem 1rem rgba($color-black, 0.8);
 
     &::after {
       transform: scaleX(1.5) scaleY(1.4);
@@ -23,7 +23,7 @@
 
   &:active {
     transform: translateY(-0.2rem);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1rem 1rem rgba($color-black, 0.5);
   }
 
   &::after {
@@ -42,19 +42,19 @@
     animation: buttonUpdown 1s ease-out 0.75s backwards;
   }
 
-  &--light {
-    background-color: #ece4e2;
+  &--brown-1 {
+    background-color: $color-brown-1;
 
     &::after {
-      background-color: #ece4e2;
+      background-color: $color-brown-1;
     }
   }
 
-  &--brown {
-    background-color: #bd8e62;
+  &--brown-2 {
+    background-color: $color-brown-2;
 
     &::after {
-      background-color: #bd8e62;
+      background-color: $color-brown-2;
     }
   }
 }

@@ -1,6 +1,7 @@
 .secondary-heading {
   font-size: 3.7rem;
   transition: all 0.3s;
+  display: inline-block;
 
   &:hover {
     text-shadow: 0 5px 10px rgba($color-black, 0.4);

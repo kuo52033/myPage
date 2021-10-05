@@ -1,0 +1,101 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color-black-2, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &-content {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &-content {
+    padding: 1rem;
+    display: flex;
+    width: 75%;
+    height: 85rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1.3rem 2rem rgba($color-black, 0.3);
+    background-color: $color-white;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.3s 0.2s;
+  }
+
+  &-left {
+    position: relative;
+    flex-basis: 60%;
+  }
+
+  &-left:hover &-image:not(:hover) {
+    transform: scale(0.9);
+  }
+
+  &-image {
+    width: 50rem;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.5s;
+    box-shadow: 0 4px 5px rgba($color-black, 0.2);
+
+    &:hover {
+      z-index: 50;
+      transform: scale(1.2);
+      outline: 5px solid green;
+      outline-offset: 5px;
+    }
+
+    &-1 {
+      top: 1rem;
+      left: 1rem;
+      transform-origin: left top;
+    }
+    &-2 {
+      top: 20rem;
+      right: 5%;
+      transform-origin: right 50%;
+    }
+    &-3 {
+      bottom: 20rem;
+      left: 1rem;
+      transform-origin: left 50%;
+    }
+    &-4 {
+      bottom: 1rem;
+      right: 5%;
+      transform-origin: bottom right;
+    }
+  }
+
+  &-right {
+    max-width: 40%;
+  }
+
+  &-text {
+    font-size: 1.7rem;
+  }
+
+  &-close {
+    &:link,
+    &:visited {
+      display: inline-block;
+      height: 2rem;
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      cursor: pointer;
+    }
+  }
+}

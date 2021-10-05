@@ -11,6 +11,7 @@ const nextIcon = document.querySelectorAll(".nextIcon");
 const technology = document.querySelector(".technology__box");
 const technology__dot = document.querySelectorAll(".technology__dotBox__dot");
 const project = document.querySelector(".projectSection");
+const popup = document.querySelector(".popup");
 
 technology__dot[dot].style.backgroundColor = "black";
 
@@ -44,6 +45,12 @@ technology__dot.forEach((dotEl, index) =>
     dot = index;
   })
 );
+
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    window.location.href = "#project";
+  }
+});
 
 window.addEventListener("scroll", () => {
   let windowScroll = window.scrollY;

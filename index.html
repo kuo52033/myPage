@@ -27,7 +27,7 @@
           <h1>Welcome to Tim's portfolio</h1>
           <a
             href="#aboutMe"
-            class="btn btn--light btn--animate u-margin-top-small"
+            class="btn btn--brown-1 btn--animate u-margin-top-small"
             >Start</a
           >
         </div>
@@ -175,7 +175,7 @@
 
       <section class="projectSection" id="project">
         <div class="u-flex-center">
-          <h1 class="secondary-heading">projects</h1>
+          <h1 class="secondary-heading">Projects</h1>
         </div>
         <div class="u-flex-center u-margin-top-small">
           <div class="project">
@@ -191,7 +191,7 @@
                   alt="diaryLogo"
                   class="project__image2"
                 />
-                <a class="btn btn--light">See More</a>
+                <a href="#popup" class="btn btn--brown-1">See More</a>
               </div>
             </figure>
             <div class="project__text u-margin-left-medium">
@@ -210,7 +210,7 @@
 
       <section class="contactSection" id="contact">
         <div class="u-flex-center">
-          <h1 class="secondary-heading">Contact me</h1>
+          <h1 class="secondary-heading">Contact Me</h1>
         </div>
         <div class="formSection">
           <form action="#" class="form" autocomplete="off">
@@ -220,22 +220,22 @@
                   class="form-input"
                   type="text"
                   name="name"
-                  placeholder="name"
+                  placeholder="Name"
                   id="name"
                   required
                 />
-                <label class="form-label" for="name">name</label>
+                <label class="form-label" for="name">Name</label>
               </div>
               <div class="form-group">
                 <input
                   class="form-input"
                   type="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="Email"
                   id="email"
                   required
                 />
-                <label class="form-label" for="email">email</label>
+                <label class="form-label" for="email">Email</label>
               </div>
             </div>
             <div class="form-group">
@@ -243,14 +243,14 @@
                 class="form-input"
                 type="text"
                 name="content"
-                placeholder="content"
+                placeholder="Content"
                 id="content"
                 required
               />
-              <label class="form-label" for="content">content</label>
+              <label class="form-label" for="content">Content</label>
             </div>
             <div class="form-group u-flex-center">
-              <button class="form-btn btn btn--brown" type="submit">
+              <button class="form-btn btn btn--brown-2" type="submit">
                 Send
                 <img
                   class="u-margin-left-small"
@@ -264,6 +264,52 @@
       </section>
     </main>
     <footer class="footer"></footer>
+
+    <div class="popup u-flex-center" id="popup">
+      <div class="popup-content">
+        <a class="popup-close" href="#project"
+          ><img src="./images/close.png" alt="close"
+        /></a>
+        <div class="popup-left">
+          <img
+            class="popup-image popup-image-1"
+            src="./images/diary.jpg"
+            alt="diary"
+          />
+          <img
+            class="popup-image popup-image-2"
+            src="./images/diary-2.png"
+            alt="diary"
+          />
+          <img
+            class="popup-image popup-image-3"
+            src="./images/diary-3.png"
+            alt="diary"
+          />
+          <img
+            class="popup-image popup-image-4"
+            src="./images/diary-4.png"
+            alt="diary"
+          />
+        </div>
+        <div class="popup-right">
+          <h1 class="secondary-heading">Diary</h1>
+          <p class="popup-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            placeat non, quas beatae quaerat omnis, harum exercitationem,
+            repudiandae tempore necessitatibus delectus suscipit nemo ex
+            excepturi dignm veritatis quas hic dolorem sint corrupti
+            reprehenderit, soluta aliquid quis consequatur excepturi itaque,
+            provident architecto iusto explicabo ducimus sit voluptate ea
+            dolorum laboriosam quo. Reiciendis! Impedit nihil quidem totam modi
+            qui quae aliquam deleniti sed ab! Beatae aliquid totam magni
+            commodi, molestias nisi minima ullam mollitia, dolore et iusto
+            reprehenderit nemo ipsum eligendi recusandae! Soluta?
+          </p>
+        </div>
+      </div>
+    </div>
+
     <script src="./app.js"></script>
   </body>
 </html>
