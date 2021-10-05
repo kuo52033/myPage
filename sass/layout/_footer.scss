@@ -1,4 +1,19 @@
 .footer {
-  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
   background-color: $color-black-2;
+
+  &-image {
+    width: 10rem;
+  }
+
+  &-right {
+    font-size: 1.8rem;
+
+    & img {
+      width: 4rem;
+    }
+  }
 }
