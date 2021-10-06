@@ -318,7 +318,8 @@ body {
   .popup-right {
     max-width: 40%; }
   .popup-text {
-    font-size: 1.7rem; }
+    font-size: 1.8rem;
+    line-height: 3.4rem; }
   .popup-close:link, .popup-close:visited {
     display: inline-block;
     height: 2rem;
