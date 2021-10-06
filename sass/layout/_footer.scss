@@ -7,6 +7,10 @@
 
   &-image {
     width: 10rem;
+
+    @include respond(phone) {
+      width: 8rem;
+    }
   }
 
   &-right {

@@ -12,6 +12,10 @@
 
   & > * {
     transform: skewX(16deg);
+
+    @include respond(tab-port) {
+      transform: skew(0deg);
+    }
   }
 
   &__shape {
@@ -34,6 +38,11 @@
     &:hover a {
       opacity: 1;
       transform: translate(-50%, 60%);
+    }
+
+    @include respond(tab-port) {
+      width: 20rem;
+      height: 20rem;
     }
   }
 
@@ -58,8 +67,11 @@
       transform: translate(-50%, -20%);
       opacity: 0;
       width: 21rem;
-      height: 11rem;
       transition: all 0.5s;
+
+      @include respond(tab-port) {
+        width: 15rem;
+      }
     }
 
     a {
@@ -101,5 +113,18 @@
   &__text {
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-transform: translateZ(0) scale(1, 1) skewX(16deg);
+
+    @include respond(tab-port) {
+      margin-top: 2.5rem;
+      font-size: 1rem;
+      -webkit-transform: translateZ(0) scale(1, 1);
+    }
+  }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    transform: skew(0deg);
+    border-radius: 15px;
+    padding: 2rem 2rem;
   }
 }

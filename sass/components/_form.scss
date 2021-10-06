@@ -4,6 +4,10 @@
 
   &-1 {
     display: flex;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -68,6 +72,12 @@
     align-items: center;
     font-size: 1.7rem;
     border: none;
+  }
+
+  &-sendIcon {
+    @include respond(phone) {
+      width: 3rem;
+    }
   }
 
   &-input:not(:placeholder-shown) + &-label,

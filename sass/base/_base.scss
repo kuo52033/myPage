@@ -13,3 +13,24 @@ body {
   font-family: "Kalam", "Noto Sans TC", sans-serif;
   overflow-x: hidden;
 }
+
+@include respond(tab-land) {
+  html,
+  body {
+    font-size: 50%;
+  }
+}
+
+@include respond(tab-port) {
+  html,
+  body {
+    font-size: 45%;
+  }
+}
+
+@include respond(phone) {
+  html,
+  body {
+    font-size: 40%;
+  }
+}

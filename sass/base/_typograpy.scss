@@ -7,4 +7,8 @@
     text-shadow: 0 5px 10px rgba($color-black, 0.4);
     transform: scale(1.2);
   }
+
+  @include respond(phone) {
+    font-size: 2.9rem;
+  }
 }

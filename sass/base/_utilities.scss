@@ -5,16 +5,32 @@
 
 .u-margin-top-small {
   margin-top: 2rem;
+
+  @include respond(tab-port) {
+    margin-top: 1.5rem;
+  }
 }
 .u-margin-top-medium {
   margin-top: 4rem;
+
+  @include respond(tab-port) {
+    margin-top: 3.5rem;
+  }
 }
 .u-margin-top-big {
   margin-top: 6rem;
+
+  @include respond(tab-port) {
+    margin-top: 5rem;
+  }
 }
 
 .u-margin-top-tech {
   margin-top: 17vh;
+
+  @include respond(tab-port) {
+    margin-top: 15vh;
+  }
 }
 
 .u-margin-right-small {

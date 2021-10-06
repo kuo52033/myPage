@@ -1,5 +1,8 @@
 .tooltip {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
   bottom: -4rem;
   right: 50%;
@@ -12,4 +15,8 @@
   font-size: 1.5rem;
   opacity: 0;
   transition: all 0.5s;
+
+  @include respond(phone) {
+    padding: 3px;
+  }
 }
