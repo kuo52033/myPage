@@ -194,6 +194,15 @@ body {
         transform: translate(-50%, 60%) translateY(-0.5rem); }
       .project__caption a:active {
         transform: translate(-50%, 60%) translateY(-0.2rem); }
+  .project__link, .project__link:visited, .project__link:link {
+    display: inline-block;
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: #000;
+    float: right;
+    transition: all 0.3s; }
+  .project__link:hover {
+    color: rosybrown; }
   .project__text {
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-transform: translateZ(0) scale(1, 1) skewX(16deg); }
@@ -320,6 +329,8 @@ body {
   .popup-text {
     font-size: 1.8rem;
     line-height: 3.4rem; }
+  .popup-subtitle {
+    font-size: 2.3rem; }
   .popup-close:link, .popup-close:visited {
     display: inline-block;
     height: 2rem;

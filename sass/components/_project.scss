@@ -81,6 +81,23 @@
     }
   }
 
+  &__link {
+    &,
+    &:visited,
+    &:link {
+      display: inline-block;
+      font-size: 2.2rem;
+      text-decoration: none;
+      color: $color-black;
+      float: right;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: rosybrown;
+    }
+  }
+
   &__text {
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-transform: translateZ(0) scale(1, 1) skewX(16deg);
