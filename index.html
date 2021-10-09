@@ -15,6 +15,7 @@
         <a href="#"
           ><img src="./images/logo.png" alt="logo" class="header__logo"
         /></a>
+        <img class="menu" src="./images/menu.png" alt="menu" />
         <ul class="header__ul">
           <li><a href="#aboutMe" class="header__ul__a">關於我</a></li>
           <li><a href="#technology" class="header__ul__a">相關技術</a></li>
@@ -22,6 +23,21 @@
           <li><a href="#contact" class="header__ul__a">聯繫</a></li>
         </ul>
       </nav>
+
+      <nav class="sidebar">
+        <div class="sidebar__content">
+          <a href="#"
+            ><img src="./images/logo.png" alt="logo" class="header__logo"
+          /></a>
+          <ul class="header__ul u-margin-top-medium">
+            <li><a href="#aboutMe" class="header__ul__a">關於我</a></li>
+            <li><a href="#technology" class="header__ul__a">相關技術</a></li>
+            <li><a href="#project" class="header__ul__a">作品</a></li>
+            <li><a href="#contact" class="header__ul__a">聯繫</a></li>
+          </ul>
+        </div>
+      </nav>
+
       <div class="header__main">
         <div class="header__main__title">
           <h1>Welcome to Tim's portfolio</h1>
@@ -38,14 +54,7 @@
         <div class="technology__box">
           <div class="technology__skill">
             <div class="technology__skill__title u-margin-top-tech">
-              <h1 class="secondary-heading u-margin-left-big">
-                Back-End Skill
-              </h1>
-              <img
-                src="./images/next.png"
-                alt="next"
-                class="nextIcon u-margin-left-big"
-              />
+              <h1 class="secondary-heading">Back-End Skill</h1>
             </div>
             <div class="technology__composition">
               <div class="u-flex-center u-margin-top-medium">
@@ -80,17 +89,7 @@
           </div>
           <div class="technology__skill">
             <div class="technology__skill__title u-margin-top-tech">
-              <img
-                src="./images/back.png"
-                alt="back"
-                class="backIcon u-margin-right-big"
-              />
               <h1 class="secondary-heading">Front-End Skill</h1>
-              <img
-                src="./images/next.png"
-                alt="next"
-                class="nextIcon u-margin-left-big"
-              />
             </div>
             <div class="technology__composition">
               <div class="u-flex-center u-margin-top-medium">
@@ -133,14 +132,7 @@
           </div>
           <div class="technology__skill">
             <div class="technology__skill__title u-margin-top-tech">
-              <img
-                src="./images/back.png"
-                alt="back"
-                class="backIcon u-margin-right-big"
-              />
-              <h1 class="secondary-heading u-margin-right-big">
-                Some other Skill
-              </h1>
+              <h1 class="secondary-heading">Some other Skill</h1>
             </div>
             <div class="technology__composition">
               <div class="u-flex-center u-margin-top-big">
@@ -171,6 +163,8 @@
             <span class="technology__dotBox__dot u-margin-left-small"></span>
           </div>
         </div>
+        <img src="./images/back.png" alt="back" class="technology-backIcon" />
+        <img src="./images/next.png" alt="next" class="technology-nextIcon" />
       </section>
 
       <section class="projectSection" id="project">
@@ -284,26 +278,30 @@
           ><img src="./images/close.png" alt="close"
         /></a>
         <div class="popup-left">
-          <img
-            class="popup-image popup-image-1"
-            src="./images/diary.jpg"
-            alt="diary"
-          />
-          <img
-            class="popup-image popup-image-2"
-            src="./images/diary-2.png"
-            alt="diary"
-          />
-          <img
-            class="popup-image popup-image-3"
-            src="./images/diary-3.png"
-            alt="diary"
-          />
-          <img
-            class="popup-image popup-image-4"
-            src="./images/diary-4.png"
-            alt="diary"
-          />
+          <div class="popup-imageGallery popup-total4">
+            <img
+              class="popup-image popup-image25"
+              src="./images/diary.jpg"
+              alt="diary"
+            />
+            <img
+              class="popup-image popup-image25"
+              src="./images/diary-2.png"
+              alt="diary"
+            />
+            <img
+              class="popup-image popup-image25"
+              src="./images/diary-3.png"
+              alt="diary"
+            />
+            <img
+              class="popup-image popup-image25"
+              src="./images/diary-4.png"
+              alt="diary"
+            />
+          </div>
+          <img src="./images/back.png" alt="back" class="popup-backIcon" />
+          <img src="./images/next.png" alt="next" class="popup-nextIcon" />
         </div>
         <div class="popup-right">
           <h1 class="secondary-heading">Diary</h1>

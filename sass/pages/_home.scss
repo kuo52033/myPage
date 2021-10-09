@@ -45,7 +45,7 @@
         rgba(204, 201, 201, 0.3)
       );
       box-shadow: 0 2px 5px rgba($color-black, 0.4);
-      transition: all 0.3s ease-in;
+      transition: all 0.2s ease-in;
 
       &:hover {
         transform: scale(1.2);
@@ -92,34 +92,56 @@
     }
   }
 
-  @include respond(phone) {
-    height: 52rem;
+  &-backIcon {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    left: 40rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+      transform: scale(1.3) translateX(-0.5rem) translateY(-50%);
+    }
+
+    @include respond(tab-land) {
+      width: 3.5rem;
+    }
+
+    @include respond(tab-port) {
+      left: 25rem;
+    }
+
+    @include respond(phone) {
+      left: 10rem;
+      width: 3rem;
+    }
   }
-}
 
-.backIcon {
-  cursor: pointer;
-  transition: all 0.2s ease-in;
+  &-nextIcon {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    right: 40rem;
+    top: 50%;
+    transform: translateY(-50%);
 
-  &:hover {
-    transform: scale(1.3) translateX(-0.5rem);
-  }
+    &:hover {
+      transform: scale(1.3) translateX(0.5rem) translateY(-50%);
+    }
 
-  @include respond(phone) {
-    width: 3rem;
-  }
-}
+    @include respond(tab-land) {
+      width: 3.5rem;
+    }
 
-.nextIcon {
-  cursor: pointer;
-  transition: all 0.2s ease-in;
+    @include respond(tab-port) {
+      right: 25rem;
+    }
 
-  &:hover {
-    transform: scale(1.3) translateX(0.5rem);
-  }
-
-  @include respond(phone) {
-    width: 3rem;
+    @include respond(phone) {
+      right: 10rem;
+      width: 3rem;
+    }
   }
 }
 
