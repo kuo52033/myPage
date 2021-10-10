@@ -9,6 +9,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  overflow: scroll;
 
   &:target {
     opacity: 1;
@@ -26,8 +27,8 @@
     align-items: center;
     width: 70%;
     border-radius: 1rem;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
     box-shadow: 0 1.3rem 2rem rgba($color-black, 0.3);
     background-color: $color-white;
     transform: scale(0);
@@ -35,15 +36,22 @@
     transition: all 0.3s 0.2s;
 
     @include respond(tab-land) {
+      width: 85%;
+      height: 80vh;
       flex-direction: column;
     }
   }
 
   &-left {
     position: relative;
-    flex-basis: 60%;
     overflow: hidden;
-    aspect-ratio: 1/1;
+    flex-basis: 60%;
+    @include respond(tab-land) {
+      min-height: 50rem;
+    }
+    @include respond(phone) {
+      min-height: 40rem;
+    }
   }
 
   &-backIcon {
@@ -85,6 +93,7 @@
     height: 100%;
     right: 0;
     display: flex;
+    align-items: center;
     transition: all 0.3s;
   }
 

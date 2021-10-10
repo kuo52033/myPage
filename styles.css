@@ -340,7 +340,8 @@ body {
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  overflow: scroll; }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -353,8 +354,8 @@ body {
     align-items: center;
     width: 70%;
     border-radius: 1rem;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
     box-shadow: 0 1.3rem 2rem rgba(0, 0, 0, 0.3);
     background-color: #fff;
     transform: scale(0);
@@ -362,12 +363,19 @@ body {
     transition: all 0.3s 0.2s; }
     @media (max-width: 1200px) {
       .popup-content {
+        width: 85%;
+        height: 80vh;
         flex-direction: column; } }
   .popup-left {
     position: relative;
-    flex-basis: 60%;
     overflow: hidden;
-    aspect-ratio: 1/1; }
+    flex-basis: 60%; }
+    @media (max-width: 1200px) {
+      .popup-left {
+        min-height: 50rem; } }
+    @media (max-width: 600px) {
+      .popup-left {
+        min-height: 40rem; } }
   .popup-backIcon {
     position: absolute;
     cursor: pointer;
@@ -397,6 +405,7 @@ body {
     height: 100%;
     right: 0;
     display: flex;
+    align-items: center;
     transition: all 0.3s; }
   .popup-image {
     object-fit: contain;
