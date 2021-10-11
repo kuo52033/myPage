@@ -33,7 +33,7 @@ const sendmail = async (e) => {
     content: form.content.value,
   };
   try {
-    const res = await fetch("http://localhost:5000/sendmail", {
+    const res = await fetch("https://mypage-email.herokuapp.com//sendmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
