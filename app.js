@@ -14,6 +14,8 @@ const popupGallery = document.querySelector(".popup-imageGallery");
 const popupNextIcon = document.querySelector(".popup-nextIcon");
 const popupBackIcon = document.querySelector(".popup-backIcon");
 const form = document.querySelector(".form");
+const successEL = document.querySelector(".form-success");
+const errorEL = document.querySelector(".form-error");
 
 const checkDot = (el, dot, index) => {
   if (dot === index) {
@@ -30,17 +32,31 @@ const sendmail = async (e) => {
     email: form.email.value,
     content: form.content.value,
   };
+  try {
+    const res = await fetch("http://localhost:5000/sendmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
 
-  const res = await fetch("http://localhost:3000/sendmail", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
+    const data = await res.json();
 
-  const data = await res.json();
-  console.log(data);
+    form.name.value = "";
+    form.email.value = "";
+    form.content.value = "";
+
+    if (errorEL.classList.contains("visible")) {
+      errorEL.classList.remove("visible");
+    }
+    successEL.classList.add("visible");
+  } catch (error) {
+    if (successEL.classList.contains("visible")) {
+      successEL.classList.remove("visible");
+    }
+    errorEL.classList.add("visible");
+  }
 };
 
 menu.addEventListener("click", () => {

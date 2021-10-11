@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
@@ -23,13 +23,13 @@ const sendmail = async (req, res) => {
   const option = {
     from: process.env.ACCOUNT,
     to: "tim31422@gmail.com",
-    subject: `${body.name}寄了一封信件給你`,
-    text: `${body.content} (我的mail為${body.email})`,
+    subject: `${body.name}寄了一封email給你`,
+    text: `${body.content} (${body.email})`,
   };
 
   try {
     await transporter.sendMail(option);
-    res.json({ message: "send success" });
+    res.json({ message: "成功" });
   } catch (error) {
     res.json({ message: error.message });
   }
