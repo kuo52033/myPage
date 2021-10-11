@@ -164,6 +164,7 @@ body {
     height: 40rem; }
     .about__card__side {
       position: absolute;
+      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       top: 0;
       bottom: 0;
