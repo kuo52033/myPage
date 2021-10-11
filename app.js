@@ -13,6 +13,7 @@ const popup = document.querySelector(".popup");
 const popupGallery = document.querySelector(".popup-imageGallery");
 const popupNextIcon = document.querySelector(".popup-nextIcon");
 const popupBackIcon = document.querySelector(".popup-backIcon");
+const form = document.querySelector(".form");
 
 const checkDot = (el, dot, index) => {
   if (dot === index) {
@@ -20,6 +21,26 @@ const checkDot = (el, dot, index) => {
   } else {
     el.style.display = "inline-block";
   }
+};
+
+const sendmail = async (e) => {
+  e.preventDefault();
+  const body = {
+    name: form.name.value,
+    email: form.email.value,
+    content: form.content.value,
+  };
+
+  const res = await fetch("http://localhost:3000/sendmail", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+
+  const data = await res.json();
+  console.log(data);
 };
 
 menu.addEventListener("click", () => {
@@ -107,3 +128,5 @@ window.addEventListener("resize", () => {
     }
   }
 });
+
+form.addEventListener("submit", (e) => sendmail(e));
