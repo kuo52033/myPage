@@ -152,6 +152,83 @@ body {
       padding: 0.8rem 2rem;
       font-size: 1rem; } }
 
+.about {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly; }
+  .about__card {
+    position: relative;
+    perspective: 150rem;
+    width: 25rem;
+    height: 40rem; }
+    .about__card__side {
+      position: absolute;
+      backface-visibility: hidden;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
+      transition: all 0.7s ease-in; }
+      .about__card__side--front {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(-40deg, rgba(220, 193, 176, 0.8) 35%, rgba(234, 214, 189, 0.6) 65%); }
+      .about__card__side--back {
+        padding: 1.5rem 2rem;
+        transform: rotateY(-180deg);
+        background-image: linear-gradient(-40deg, rgba(189, 142, 98, 0.8) 35%, rgba(164, 104, 67, 0.6) 65%); }
+    .about__card:hover .about__card__side--front {
+      transform: rotateY(180deg); }
+    .about__card:hover .about__card__side--back {
+      transform: rotateY(0); }
+  .about__avatar {
+    width: 19rem;
+    height: 19rem;
+    border-radius: 50%;
+    overflow: hidden; }
+    .about__avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .about__heading {
+    font-weight: 200;
+    font-size: 3rem;
+    letter-spacing: 0.7rem; }
+    .about__heading2 {
+      font-size: 2rem; }
+  .about__innerText {
+    display: flex;
+    align-items: center; }
+    .about__innerText img {
+      width: 2rem;
+      margin-right: 1.5rem; }
+  .about__ul {
+    list-style-type: none;
+    font-size: 1.5rem; }
+  .about__li {
+    padding: 1rem; }
+    .about__li:not(:last-child) {
+      border-bottom: 2px solid #dcc1b0; }
+  .about__right {
+    max-width: 40%; }
+    @media (max-width: 600px) {
+      .about__right {
+        max-width: 85%;
+        margin-bottom: 5rem; } }
+  .about__text {
+    font-size: 1.8rem;
+    line-height: 3.5rem; }
+  @media (max-width: 600px) {
+    .about {
+      flex-direction: column-reverse;
+      align-items: center; } }
+
 .tooltip {
   position: absolute;
   display: flex;
@@ -544,8 +621,8 @@ body {
       clip-path: polygon(0 0, 100% 0, 100% 67vh, 0 75vh); } }
   @media (max-width: 600px) {
     .header__main {
-      height: 55vh;
-      clip-path: polygon(0 0, 100% 0, 100% 52vh, 0 55vh); } }
+      height: 63vh;
+      clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 63vh); } }
 
 .menu {
   display: none;
@@ -604,11 +681,19 @@ body {
     .footer-right img {
       width: 4rem; }
 
+.aboutMeSection {
+  padding-top: 7rem;
+  padding-bottom: 8rem; }
+  @media (max-width: 600px) {
+    .aboutMeSection {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem; } }
+
 .technology {
   position: relative;
-  height: 60rem;
+  padding-top: 7rem;
+  padding-bottom: 8rem;
   width: 100%;
-  margin-top: -14vh;
   z-index: 0;
   overflow-x: hidden;
   background-color: #ece4e2; }
@@ -655,7 +740,7 @@ body {
       height: 100%; }
   .technology__dotBox {
     position: absolute;
-    bottom: 4rem;
+    bottom: 3.5rem;
     width: 100%; }
     .technology__dotBox__dot {
       width: 1.5rem;
@@ -685,10 +770,10 @@ body {
         width: 3.5rem; } }
     @media (max-width: 900px) {
       .technology-backIcon {
-        left: 25rem; } }
+        left: 20rem; } }
     @media (max-width: 600px) {
       .technology-backIcon {
-        left: 10rem;
+        left: 3rem;
         width: 3rem; } }
   .technology-nextIcon {
     position: absolute;
@@ -704,18 +789,21 @@ body {
         width: 3.5rem; } }
     @media (max-width: 900px) {
       .technology-nextIcon {
-        right: 25rem; } }
+        right: 20rem; } }
     @media (max-width: 600px) {
       .technology-nextIcon {
-        right: 10rem;
+        right: 3rem;
         width: 3rem; } }
+  @media (max-width: 600px) {
+    .technology {
+      padding-top: 3rem; } }
 
 .projectSection {
   padding-top: 7rem;
   padding-bottom: 5rem;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(./images/bgImage.png);
-  background-size: 100% 2000px;
-  background-position: 50% 15%;
+  background-size: cover;
+  background-position: 50% 13%;
   background-repeat: no-repeat; }
   @media (max-width: 900px) {
     .projectSection {

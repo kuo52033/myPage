@@ -129,8 +129,8 @@
     }
 
     @include respond(phone) {
-      height: 55vh;
-      clip-path: polygon(0 0, 100% 0, 100% 52vh, 0 55vh);
+      height: 63vh;
+      clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 63vh);
     }
   }
 }

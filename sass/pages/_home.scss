@@ -1,8 +1,18 @@
+.aboutMeSection {
+  padding-top: 7rem;
+  padding-bottom: 8rem;
+
+  @include respond(phone) {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
 .technology {
   position: relative;
-  height: 60rem;
+  padding-top: 7rem;
+  padding-bottom: 8rem;
   width: 100%;
-  margin-top: -14vh;
   z-index: 0;
   overflow-x: hidden;
   background-color: $color-bg-1;
@@ -70,7 +80,7 @@
 
   &__dotBox {
     position: absolute;
-    bottom: 4rem;
+    bottom: 3.5rem;
     width: 100%;
 
     &__dot {
@@ -109,11 +119,11 @@
     }
 
     @include respond(tab-port) {
-      left: 25rem;
+      left: 20rem;
     }
 
     @include respond(phone) {
-      left: 10rem;
+      left: 3rem;
       width: 3rem;
     }
   }
@@ -135,13 +145,17 @@
     }
 
     @include respond(tab-port) {
-      right: 25rem;
+      right: 20rem;
     }
 
     @include respond(phone) {
-      right: 10rem;
+      right: 3rem;
       width: 3rem;
     }
+  }
+
+  @include respond(phone) {
+    padding-top: 3rem;
   }
 }
 
@@ -154,8 +168,8 @@
       rgba($color-white, 0.4)
     ),
     url(./images/bgImage.png);
-  background-size: 100% 2000px;
-  background-position: 50% 15%;
+  background-size: cover;
+  background-position: 50% 13%;
   background-repeat: no-repeat;
 
   @include respond(tab-port) {
