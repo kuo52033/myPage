@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
@@ -36,7 +36,7 @@ const sendmail = async (req, res) => {
 };
 
 app.listen(PORT, () => {
-  console.log("server is starting....");
+  console.log("server is starting");
 });
 
 app.use(express.json({ limit: "30mb", extended: true }));
