@@ -4,7 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "sass": "node-sass ./sass/main.scss ./styles.css -w"
+    "watch": "node-sass ./sass/main.scss ./css/styles.css -w",
+    "compile": "node-sass ./sass/main.scss ./css/styles.css",
+    "prefix": "postcss --use autoprefixer -b 'last 3 versions' ./css/styles.css -o ./css/style.prefix.css",
+    "compress": "node-sass ./css/style.prefix.css ./css/styles.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,10 @@
   },
   "homepage": "https://github.com/kuo52033/myPage#readme",
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "autoprefixer": "^10.3.7",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1"
   }
 }

@@ -34,3 +34,7 @@ body {
     font-size: 40%;
   }
 }
+
+::selection {
+  background-color: $color-brown-1;
+}

@@ -69,7 +69,7 @@
   }
 
   &__heading {
-    font-weight: 200;
+    font-weight: 500;
     font-size: 3rem;
     letter-spacing: 0.7rem;
 
@@ -112,6 +112,20 @@
   &__text {
     font-size: 1.8rem;
     line-height: 3.5rem;
+  }
+
+  &_seeMore {
+    display: none;
+    position: absolute;
+    bottom: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 100;
+    font-size: 2px;
+
+    @media screen and (hover: none) {
+      display: inline-block;
+    }
   }
 
   @include respond(phone) {

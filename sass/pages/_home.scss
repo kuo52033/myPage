@@ -4,7 +4,7 @@
 
   @include respond(phone) {
     padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -167,7 +167,7 @@
       rgba($color-white, 0.4),
       rgba($color-white, 0.4)
     ),
-    url(./images/bgImage.png);
+    url(../images/bgImage.png);
   background-size: cover;
   background-position: 50% 13%;
   background-repeat: no-repeat;

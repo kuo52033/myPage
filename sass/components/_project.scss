@@ -90,6 +90,11 @@
       &:active {
         transform: translate(-50%, 60%) translateY(-0.2rem);
       }
+
+      @media screen and (hover: none) {
+        opacity: 1;
+        transform: translate(-50%, 60%);
+      }
     }
   }
 
