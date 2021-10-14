@@ -17,6 +17,9 @@ const form = document.querySelector(".form");
 const successEL = document.querySelector(".form-success");
 const errorEL = document.querySelector(".form-error");
 
+const about = document.querySelector(".about");
+let aboutAnime = false;
+
 const checkDot = (el, dot, index) => {
   if (dot === index) {
     el.style.display = "none";
@@ -58,6 +61,11 @@ const sendmail = async (e) => {
     errorEL.classList.add("visible");
   }
 };
+
+if (about.getBoundingClientRect().top <= 980 && !aboutAnime) {
+  about.classList.add("anime");
+  aboutAnime = true;
+}
 
 menu.addEventListener("click", () => {
   sidebar.classList.add("visible");
@@ -135,6 +143,10 @@ popupNextIcon.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   let windowScroll = window.scrollY;
   project.style.backgroundPosition = `50% ${windowScroll * 0.04}%`;
+  if (about.getBoundingClientRect().top <= 980 && !aboutAnime) {
+    about.classList.add("anime");
+    aboutAnime = true;
+  }
 });
 
 window.addEventListener("resize", () => {

@@ -4,11 +4,30 @@
   display: flex;
   justify-content: space-evenly;
 
+  &.anime &__card {
+    animation: aboutCard 1.8s ease-out forwards;
+  }
+
+  &.anime &__right {
+    animation: aboutRight 1.8s ease-out forwards;
+  }
+
+  @include respond(phone) {
+    &.anime &__card {
+      animation: aboutPhone 1.8s ease-out forwards;
+    }
+
+    &.anime &__right {
+      animation: aboutPhone 1.8s ease-out forwards;
+    }
+  }
+
   &__card {
     position: relative;
     perspective: 150rem;
     width: 25rem;
     height: 40rem;
+    opacity: 0;
 
     &__side {
       position: absolute;
@@ -103,6 +122,7 @@
 
   &__right {
     max-width: 40%;
+    opacity: 0;
     @include respond(phone) {
       max-width: 85%;
       margin-bottom: 5rem;

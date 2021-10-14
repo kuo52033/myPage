@@ -15,6 +15,29 @@
   100% {
     opacity: 1; } }
 
+@keyframes aboutCard {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes aboutRight {
+  0% {
+    transform: translateX(40%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes aboutPhone {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
@@ -160,11 +183,21 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly; }
+  .about.anime .about__card {
+    animation: aboutCard 1.8s ease-out forwards; }
+  .about.anime .about__right {
+    animation: aboutRight 1.8s ease-out forwards; }
+  @media only screen and (max-width: 600px) {
+    .about.anime .about__card {
+      animation: aboutPhone 1.8s ease-out forwards; }
+    .about.anime .about__right {
+      animation: aboutPhone 1.8s ease-out forwards; } }
   .about__card {
     position: relative;
     perspective: 150rem;
     width: 25rem;
-    height: 40rem; }
+    height: 40rem;
+    opacity: 0; }
     .about__card__side {
       position: absolute;
       -webkit-backface-visibility: hidden;
@@ -220,7 +253,8 @@ body {
     .about__li:not(:last-child) {
       border-bottom: 2px solid #dcc1b0; }
   .about__right {
-    max-width: 40%; }
+    max-width: 40%;
+    opacity: 0; }
     @media only screen and (max-width: 600px) {
       .about__right {
         max-width: 85%;
