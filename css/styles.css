@@ -268,8 +268,7 @@ body {
     bottom: -6rem;
     left: 50%;
     transform: translateX(-50%);
-    font-weight: 100;
-    font-size: 2px; }
+    font-weight: 100; }
     @media screen and (hover: none) {
       .about_seeMore {
         display: inline-block; } }
