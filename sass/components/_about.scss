@@ -56,7 +56,7 @@
 
       &--back {
         padding: 1.5rem 2rem;
-        transform: rotateY(-180deg);
+        transform: rotateY(180deg);
         background-image: linear-gradient(
           -40deg,
           rgba(#bd8e62, 0.8) 35%,
@@ -66,7 +66,7 @@
     }
 
     &:hover &__side--front {
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg);
     }
 
     &:hover &__side--back {

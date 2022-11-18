@@ -51,9 +51,10 @@
         left: 0;
         background-color: #ffb471;
         width: 100%;
-        height: 0.2rem;
+        height: 0.4rem;
         border-radius: 1.5rem;
         transform: scale(0);
+        transform-origin: left;
         transition: all 0.5s;
       }
 
@@ -64,9 +65,10 @@
         left: 0;
         background-color: #ffb471;
         width: 100%;
-        height: 0.2rem;
+        height: 0.4rem;
         border-radius: 1.5rem;
         transform: scale(0);
+        transform-origin: right;
         transition: all 0.5s;
       }
     }
@@ -87,8 +89,9 @@
     position: relative;
     height: 93vh;
     width: 100%;
+    margin-top: 7rem;
     background-color: gray;
-    background-image: linear-gradient(
+    background: linear-gradient(
         to top,
         rgba($color-white, 0.7) 18%,
         transparent 27%
@@ -96,7 +99,6 @@
       url("../images/me.jpeg");
     background-size: cover;
     background-position: center center;
-    margin-top: 7rem;
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 93vh);
     z-index: 5;
 

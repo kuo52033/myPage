@@ -218,10 +218,10 @@ body {
         background-image: linear-gradient(-40deg, rgba(220, 193, 176, 0.8) 35%, rgba(234, 214, 189, 0.6) 65%); }
       .about__card__side--back {
         padding: 1.5rem 2rem;
-        transform: rotateY(-180deg);
+        transform: rotateY(180deg);
         background-image: linear-gradient(-40deg, rgba(189, 142, 98, 0.8) 35%, rgba(164, 104, 67, 0.6) 65%); }
     .about__card:hover .about__card__side--front {
-      transform: rotateY(180deg); }
+      transform: rotateY(-180deg); }
     .about__card:hover .about__card__side--back {
       transform: rotateY(0); }
   .about__avatar {
@@ -638,9 +638,10 @@ body {
       left: 0;
       background-color: #ffb471;
       width: 100%;
-      height: 0.2rem;
+      height: 0.4rem;
       border-radius: 1.5rem;
       transform: scale(0);
+      transform-origin: left;
       transition: all 0.5s; }
     .header__ul__a::before {
       content: "";
@@ -649,9 +650,10 @@ body {
       left: 0;
       background-color: #ffb471;
       width: 100%;
-      height: 0.2rem;
+      height: 0.4rem;
       border-radius: 1.5rem;
       transform: scale(0);
+      transform-origin: right;
       transition: all 0.5s; }
   .header__ul li {
     padding: 2rem; }
@@ -666,11 +668,11 @@ body {
   position: relative;
   height: 93vh;
   width: 100%;
+  margin-top: 7rem;
   background-color: gray;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.7) 18%, transparent 27%), url("../images/me.jpeg");
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.7) 18%, transparent 27%), url("../images/me.jpeg");
   background-size: cover;
   background-position: center center;
-  margin-top: 7rem;
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 93vh);
   z-index: 5; }
   .header__main__title {
